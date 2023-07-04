@@ -74,8 +74,15 @@ function ortalamaBul(aritmetik) {
   örnek output: [109, 216, 288, 143, 185, 194]
 */
 
-function ortalamadanBuyukleriBul(/* kodlar buraya */) {
-  // kodlar buraya
+function ortalamadanBuyukleriBul(arr, ortalamaBul) {
+  const ortalama1 = ortalamaBul(arr);
+  const sonuc = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] >= ortalama1) {
+      sonuc.push(arr[i]);
+    }
+  }
+  return sonuc.length === 0 ? null : sonuc;
 }
 
 /* !!!! Burdan aşağısını değiştirmeyin !!!! */
