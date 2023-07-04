@@ -16,8 +16,13 @@
   örnek output: ""
 */
 
-function dosyaAdiniBul(/* kodlar buraya */) {
-  // kodlar buraya
+function dosyaAdiniBul(path) {
+  if (path.includes("/")) {
+    let segments = path.split("/");
+    return segments[segments.length - 1];
+  } else {
+    return path;
+  }
 }
 
 /*
@@ -38,8 +43,15 @@ function dosyaAdiniBul(/* kodlar buraya */) {
   örnek output: 104
 */
 
-function ortalamaBul(/* kodlar buraya */) {
-  // kodlar buraya
+function ortalamaBul(aritmetik) {
+  if (aritmetik.length === 0) {
+    return null;
+  }
+  let toplam = 0;
+  for (let i = 0; i < aritmetik.length; i++) {
+    toplam += aritmetik[i];
+  }
+  return toplam / aritmetik.length;
 }
 
 /*
